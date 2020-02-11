@@ -640,17 +640,15 @@ In the second scenario, you need to:
 
 
 
-That's it. I hope this tutorial was helpful. 
+That's it. I hope this tutorial was helpful. For more details and info please check the [oficial jupyter-book documentation](https://jupyterbook.org/intro).
 
-```
 ***
-```
 
-This is my professional website: 
+This is my professional website: https://pablocaceres.org/
 
-This is my Twitter account:
+This is my Twitter account: https://twitter.com/CodeBug88
 
-This is my GitHub account: 
+This is my GitHub account: https://github.com/pabloinsente
 
 [Back to the top](#how-to-create-an-on-line-jupyter-book-from-scratch)
 
