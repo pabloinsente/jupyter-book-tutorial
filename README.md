@@ -14,11 +14,11 @@ You have a bunch of Jupyter Notebooks that you want to share with people. These 
 2. **Run in binder**: put everything in GitHub, create a link to https://mybinder.org/ with the right configuration, so that people can run the notebooks in the cloud.
 3. **Run on a website**: build a website with links to cloud computing instances.
 
-*Option 1* one is easier for you, but harder for the user. *Option 2*, is a bit harder for you, but easy for the user. *Option 3 is the hardest for you, but easier for the user*. Let's say you're willing to do more work to create the best possible experience for the user. This is when using jupyter-books is your best option. It minimizes the time and effort requited to built the website and provides an outstanding experience to the user. 
+*Option 1* one is easier for you, but harder for the user. *Option 2*, is a bit harder for you, but easy for the user. *Option 3 is the hardest for you, but easier for the user*. Let's say you're willing to do more work to create the best possible experience for the user. This is when using jupyter-books is your best option. It minimizes the time and effort required to built the website and provides an outstanding experience to the user. 
 
-## What do you need to begin
+## What you need to begin
 
-As a minimum, you need these things:
+At the minimum, you need these things:
 
 - A python 3.6 or 3.7 installation https://www.python.org/downloads/
 - A git installation https://git-scm.com/book/en/v2/Getting-Started-Installing-Git 
@@ -92,7 +92,7 @@ jupyter-book       0.6.4
 
 ### Step 4: create a jupyter-book template
 
-The whole point of `jupyter-book` is to provide a template that will make creating  your book-site fast and easy. A template for your book can be created by running:
+The whole point of `jupyter-book` is to provide a template that will make creating your book-site fast and easy. A template for your book can be created by running:
 
 ```bash
 jupyter-book create my-book
@@ -111,7 +111,7 @@ Finished creating a new book at `./my-book`
   content correctly, and ensure it has the correct order.
 
 - Your configuration file is at `./my-book/_config.yml`.
-  You should check its contents and double-check that the values  are correct for your site.
+  You should check its contents and double-check that the values are correct for your site.
 
 Notes
 =====
@@ -125,9 +125,9 @@ Notes
 
 ### Step 5: remove the files in the `my-book/contents/` directory 
 
-The `contents/` folder in the `my-book/` folder is the one containing the files and structure that will be used by the `jupyter-book` package to build your site. As it now, it contains a few demo-files. Let's remove those files to then replace them with your content. 
+The `contents/` folder in the `my-book/` folder is the one containing the files and structure that will be used by the `jupyter-book` package to build your site. As of now, it contains a few demo files. Let's remove those files to then replace them with your content. 
 
-Assuming that you are in `my-book-files/` directory, type this to remove the demo-files:
+Assuming that you are in `my-book-files/` directory, type this to remove the demo files:
 
 ```bash
 # remove .ipynb and .md files
@@ -225,7 +225,7 @@ total 0
 
 ### Step 7: create a table of contents file matching the contents of your book
 
-Now that you have your contents in place, you need a *table of contents* to match that. The table of contents  is the `my-book/_data` in the `toc.yml` file. You have two options for this: to modify the existing `toc.yml` file to match the contents or to create a new one from scratch. The existing one has too much info to absorb, so I'll create a new one to explain each component. Feel free to use tour favorite text editor to edit the file
+Now that you have your contents in place, you need a *table of contents* to match that. The table of contents  is the `my-book/_data` in the `toc.yml` file. You have two options for this: to modify the existing `toc.yml` file to match the contents or to create a new one from scratch. The existing one has too much info to absorb, so I'll create a new one to explain each component. Feel free to use your favorite text editor to edit the file.
 
 ```bash
 # create an empty toc.yml file  
@@ -252,7 +252,7 @@ From the jupyter-book documentation, we know that each `toc.yml` has the followi
 # - header: My Header  # Will insert a header with no link in the sidebar
 ```
 
-Next, let's populate the file with a few elements. Remember that the path to the files are relative to the `contents/` directory
+Next, let's populate the file with a few elements. Remember that the path to the files are relative to the `contents/` directory.
 
 **HEADS UP**: 
 
@@ -267,7 +267,7 @@ Next, let's populate the file with a few elements. Remember that the path to the
 - url: /intro
   not_numbered: true
 
-# ad a divider: a divider is just a black line separating sections. It is just aesthetics.
+# add a divider: a divider is just a black line separating sections. It is just aesthetics.
 - divider: true
 
 # add a second header
@@ -293,7 +293,7 @@ Next, let's populate the file with a few elements. Remember that the path to the
   not_numbered: true
 ```
 
-Now, let's remove the old `toc.yml` file and past the new one:
+Now, let's remove the old `toc.yml` file and paste the new one:
 
 ```bash
 rm my-book/_data/toc.yml 
@@ -325,7 +325,7 @@ vega_datasets
 
 Note that if you just want the latest version of the package to be used, you can omit the `==version-number` part (as in the `vega_datasets`), and just pass the package name. This is not recommended because future releases of the package may break your code functionality. The best is just to figure out the exact package versions you are using. One way is to type `pip list` (assuming you are using `pip`) or `conda list` (if you are using `conda`) in the terminal, in the directory and environment where you ran your code. 
 
-Now, let's remove the old `requirements.txt` file and past the new one:
+Now, let's remove the old `requirements.txt` file and paste the new one:
 
 ```bash
 rm my-book/requirements.txt
@@ -334,15 +334,15 @@ cp requirements.txt my-book/
 
 ### Step 9: create a GitHub account and a repository for the project
 
-If you have a GitHub account already, you may be tempted to use your existing account to deploy your project. This may not be a good idea because that may interfere with your ability to use your GitHub account to deploy something more personal in the future, like a resume page or a blog. Also, if you are using GitHub pages already, deploying the site without messing up with your existing website may be tricky. Therefore, it is highly recommended to *create a GitHub account for the project*. You'll need an email account *not associated* with an existing GitHub account. With that, you can go to https://github.com/ and follow the Sing Up instructions. 
+If you have a GitHub account already, you may be tempted to use your existing account to deploy your project. This may not be a good idea because that may interfere with your ability to use your GitHub account to deploy something more personal in the future, like a resume page or a blog. Also, if you are using GitHub pages already, deploying the site without messing up with your existing website may be tricky. Therefore, it is highly recommended to *create a GitHub account for the project*. You'll need an email account *not associated* with an existing GitHub account. With that, you can go to https://github.com/ and follow the Sign Up instructions. 
 
 
 
-Once you are ready with your new account, create a new *empty repository* for the project.  This is, no *README*, no *LICENSE*, no *.gitignore*. Just empty. Normally, GitHub should prompt you to create a new repo when you verify your email account. If you created one, you can use that one for the next steps. Otherwise, follow steps 1 through 6 in the instructions here https://help.github.com/en/github/getting-started-with-github/create-a-repo
+Once you are ready with your new account, create a new *empty repository* for the project.  That is, no *README*, no *LICENSE*, no *.gitignore*. Just empty. Normally, GitHub should prompt you to create a new repo when you verify your email account. If you created one, you can use that one for the next steps. Otherwise, follow steps 1 through 6 in the instructions here https://help.github.com/en/github/getting-started-with-github/create-a-repo
 
 
 
-You can name your repo as you like, but let's assume that you name it `my-book-site/`. Now we need to connect the on-line repo with your machine. This time, make sure you are in your local `my-book/` directory, and follow these instructions:
+You can name your repo as you like, but let's assume that you name it `my-book-site/`. Now we need to connect the online repo with your machine. This time, make sure you are in your local `my-book/` directory, and follow these instructions:
 
 ```bash
 # navigate to the book directory
@@ -370,7 +370,7 @@ Now you need to commit the files that will be pushed to GitHub. Depending on you
 # commit the files to be pushed
 git commit -m "First commit"
 
-# assuming it ask your for "*** Please tell me who you are"
+# assuming it asks you "*** Please tell me who you are"
 git config user.email "your.ney.email@gmail.com"
 git config user.name "your-new-github-username"
 # repeat the commit if necessary
@@ -398,7 +398,7 @@ Password for 'https://my-first-jupyter-book@github.com': your-password
 
 ### Step 10: create a `_config.yml` configuration file
 
-The last file we need to add is the `_config.yml` file. Again, one option is just to edit the exiting  `_config.yml` file in the `my-book/` directory. I'll fill in this step-by-step, again, just for the sake of explaining in detail what are you doing here:
+The last file we need to add is the `_config.yml` file. Again, one option is just to edit the existing  `_config.yml` file in the `my-book/` directory. I'll fill in this step-by-step, again, just for the sake of explaining in detail what are you doing here:
 
 ```bash
 # if you were at the my-book/ directory, go back to the my-book-files/ directory
@@ -629,7 +629,7 @@ In the first scenario, you need to:
 2. rebuild the site running `jupyter-book build my-book/` again
 3. push the changes to GitHub.
 
-The site should be rebuilt on-line by GitHub pages with the changes
+The site should be rebuilt online by GitHub pages with the changes
 
 In the second scenario, you need to:
 
